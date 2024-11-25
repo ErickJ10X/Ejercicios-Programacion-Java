@@ -5,7 +5,20 @@ public class Principal {
         System.out.println(factorial(5));
         System.out.println(sumaMultiplos(10,20));
         numeroshasta10();
+        System.out.println("");
         numeroAmstrong(371);
+        System.out.println(sumatoria(10));
+    }
+
+    public static String sumatoria(int n){
+        String result = "";
+        int valorfinal=0;
+        for (int i = 1; i <= n; i++) {
+            valorfinal += i;
+            result += (i!=n)?i + " + ":n + " = ";
+        }
+        result += valorfinal;
+        return result;
     }
 
     public static String factorial(int num){
