@@ -2,7 +2,7 @@ package com.ejercicios.numerosamigos;
 
 public class Principal {
     public static void main(String[] args) {
-        numerosAmigos(28, 28);
+        numerosAmigos(28, 27);
     }
 
     public static void numerosAmigos(int a, int b){
@@ -14,13 +14,16 @@ public class Principal {
                 if (a%i == 0)
                     sumaDivisoresA+=i;
             }
-
-            for (int i = 1; i < b; i++) {
-                if (b%i == 0)
-                    sumaDivisoresB+=i;
-            }
-            if (sumaDivisoresA == b && sumaDivisoresB == a){
-                System.out.println("son numeros amigos");
+            if (sumaDivisoresA==b){
+                for (int i = 1; i < b; i++) {
+                    if (b%i == 0)
+                        sumaDivisoresB+=i;
+                }
+                if (sumaDivisoresA == b && sumaDivisoresB == a){
+                    System.out.println("son numeros amigos");
+                } else {
+                    System.out.println("no son numeros amigos");
+                }
             } else {
                 System.out.println("no son numeros amigos");
             }
