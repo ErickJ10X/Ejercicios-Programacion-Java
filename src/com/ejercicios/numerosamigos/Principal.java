@@ -2,24 +2,24 @@ package com.ejercicios.numerosamigos;
 
 public class Principal {
     public static void main(String[] args) {
-        numerosAmigos(28, 27);
+        numerosAmigos(220, 284);
     }
 
-    public static void numerosAmigos(int a, int b){
-        int sumaDivisoresA=0;
-        int sumaDivisoresB=0;
-        String divisoresA="";
-        if (a>0 && b>0){
+    public static void numerosAmigos(int a, int b) {
+        int sumaDivisoresA = 0;
+        int sumaDivisoresB = 0;
+        String divisoresA = "";
+        if (a > 0 && b > 0) {
             for (int i = 1; i < a; i++) {
-                if (a%i == 0)
-                    sumaDivisoresA+=i;
+                if (a % i == 0) sumaDivisoresA += i;
             }
-            if (sumaDivisoresA==b){
+            if (sumaDivisoresA == b) {
                 for (int i = 1; i < b; i++) {
-                    if (b%i == 0)
-                        sumaDivisoresB+=i;
+                    if (b % i == 0) {
+                        sumaDivisoresB += i;
+                    }
                 }
-                if (sumaDivisoresA == b && sumaDivisoresB == a){
+                if (sumaDivisoresB == a) {
                     System.out.println("son numeros amigos");
                 } else {
                     System.out.println("no son numeros amigos");
@@ -27,9 +27,8 @@ public class Principal {
             } else {
                 System.out.println("no son numeros amigos");
             }
-        }else {
+        } else {
             System.out.println("tienen que ser numeros positivos");
         }
-
     }
 }
