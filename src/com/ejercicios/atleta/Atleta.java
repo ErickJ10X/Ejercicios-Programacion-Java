@@ -14,6 +14,7 @@ public class Atleta {
         this.nombre = nombre;
         this.tiempo = tiempo;
         this.identificador = contador;
+        contador++;
     }
 
     // metodos
